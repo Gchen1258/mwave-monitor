@@ -12,7 +12,7 @@ let queue = housecall({
   concurrency: 1,
   cooldown: 700
 });
-mongoose.connect(`mongodb://localhost:27017/mwave-monitor`, {
+mongoose.connect(`mongodb://127.0.0.1:27017/mwave-monitor`, {
     useNewUrlParser: true,
     useCreateIndex: true
 })
@@ -37,7 +37,6 @@ async function sendDicordWebhook(embedData) {
   {
     console.log(err)
   }
-  
 }
 
 startmonitor()
